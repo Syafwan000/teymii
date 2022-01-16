@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spartan&display=swap');
+
+:root {
+    --black-color: rgb(27, 27, 27);
+    --white-color: #fff;
+}
+
+body {
+    background-color: var(--white-color);
+}
+
+/* Navbar */
+
+nav.navbar {
+    background-color: var(--black-color) !important;
+}
+
+a.navbar-brand {
+    color: var(--white-color) !important;
+    font-family: 'Pacifico', cursive;
+    font-size: 25px;
+}
+
+a.nav-link {
+    color: var(--white-color) !important;
+    font-size: 25px;
+}
+
+/* Akhir Navbar */
+
+.container.wrapper-home {
+    background-color: #f5f5f5;
+    border-right: 1px solid #ccc9c9;
+    border-left: 1px solid #ccc9c9;
+    width: 800px;
+}
+
+h2.title {
+    font-family: 'Archivo Black', sans-serif;
+}
+
+p.sub-title {
+    font-family: 'Spartan', sans-serif;
+}
+
+.container.input-name {
+    padding: 0 150px 0 150px;
+}
+
+input[type='text']:focus {
+    border: 1px solid var(--black-color);
+}
+
+button.btn-dark {
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+
+.container .line {
+    width: 70%;
+    height: 3px;
+    padding: 0 30px 0 30px;
+    background-color: var(--black-color);
+}
+
+span.teymii {
+    font-family: 'Pacifico', cursive;
+}
+
+.btn-facebook {
+    background-color: #34518c;
+    color: var(--white-color);
+}
+
+.btn-facebook:hover {
+    background-color: #284275;
+    color: var(--white-color);
+}
+
+.btn-whatsapp {
+    background-color: #24cc63;
+    color: var(--white-color);
+}
+
+.btn-whatsapp:hover {
+    background-color: #27ac5a;
+    color: var(--white-color);
+}
+
+.btn-telegram {
+    background-color: #0084c6;
+    color: var(--white-color);
+}
+
+.btn-telegram:hover {
+    background-color: #0575ad;
+    color: var(--white-color);
+}
+
+.btn-link {
+    color: var(--black-color);
+    background: none;
+    border: 1px solid var(--black-color);
+    text-decoration: none;
+}
+
+.btn-link.copied {
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+
+.btn-link:hover {
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+
+span.social-media-text {
+    font-family: 'Spartan', sans-serif;
+    font-size: 12px;
+}
+
+i.fas.fa-link, i.fab.fa-facebook-f {
+    font-size: 16px;
+}
