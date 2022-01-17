@@ -8,24 +8,36 @@ use Illuminate\Support\Str;
 
 class CreateMessage extends Component
 {
-    public $newName;
+    public $name;
+    public $desc;
 
     public function addName()
     {
         $this->validate([
-            'newName' => 'required|max:55'
+            'name' => 'required|max:55|min:3',
+            'desc' => 'max:120'
         ]);
 
         $randomString = Str::random(7);
 
         User::create([
-            'name' => $this->newName,
+            'name' => $this->name,
+            'desc' => $this->desc,
             'slug' => $randomString
         ]);
 
-        $this->newName = '';
+        $this->name = '';
+        $this->desc = '';
 
         redirect('/' . $randomString);
+    }
+
+    public function updated($field)
+    {
+        $this->validateOnly($field, [
+            'name' => 'max:55|min:3',
+            'desc' => 'max:120'
+        ]);
     }
 
     public function render()

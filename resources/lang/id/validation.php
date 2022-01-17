@@ -141,8 +141,18 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'name' => [
+            'required' => 'Tidak boleh mengosongkan nama',
+            'max' => 'Nama maksimal terdiri dari 55 karakter',
+            'min' => 'Nama minimal terdiri dari 3 karakter'
+        ],
+        'desc' => [
+            'max' => 'Deskripsi maksimal terdiri dari 120 karakter'
+        ],
+        'message' => [
+            'required' => 'Pesan tidak boleh kosong',
+            'max' => 'Pesan maksimal terdiri dari 255 karakter',
+            'min' => 'Pesan minimal terdiri dari 3 karakter'
         ],
     ],
 
