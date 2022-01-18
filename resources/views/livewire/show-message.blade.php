@@ -1,7 +1,8 @@
 <div>
     @if($messages->count())
+    <p class="total-message text-center mt-3">{{ $total_messages }} Pesan</p>
         @foreach($messages as $message)
-        <div class="container messages mt-4">
+        <div class="container messages mt-3">
             <label class="label-message">Seseorang</label>
             <p class="message-time mb-2">{{ $message->created_at->diffForHumans() }}</p>
             <article class="m-0">{{ $message->message }}</article>

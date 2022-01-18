@@ -1,5 +1,11 @@
 @extends('layout.main')
 
+@section('title')
+
+{{ $title }}
+
+@endsection
+
 @section('content')
 
 <div class="text-center">
@@ -9,10 +15,11 @@
     @else
         <p class="desc mb-2">Berikan pesan kepadanya!</p>
     @endif
-    <div class="input-group mb-3">
+    <div class="input-group mb-0">
         <input type="text" class="form-control shadow-none" id="url" value="{{ url()->current() }}">
         <button class="btn btn-dark shadow-none" data-clipboard-target="#url"><i class="fas fa-clipboard"></i></button>
     </div>
+    <label class="label-remind mb-3"><i>*simpan link diatas</i></label>
     <div class="social-media mb-3">
         <a href="{{ $facebook }}" target="_blank" class="btn btn-facebook shadow-none">
             <i class="fab fa-facebook-f"></i>&nbsp;<span class="social-media-text">Facebook</span>

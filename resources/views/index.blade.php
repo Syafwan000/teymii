@@ -1,5 +1,11 @@
 @extends('layout.main')
 
+@section('title')
+
+{{ $title }}
+
+@endsection
+
 @section('content')
 
 <livewire:create-message></livewire:create-message>
@@ -19,10 +25,9 @@
     <a href="{{ $telegram }}" target="_blank" class="btn btn-telegram me-1 shadow-none">
         <i class="fab fa-telegram-plane"></i>&nbsp;<span class="social-media-text">Telegram</span>
     </a>
-    <input type="hidden" id="URL" value="{{ url()->current() }}">
-    <a class="btn btn-link shadow-none" onclick="copyLink()">
+    <button class="btn btn-link shadow-none" onclick="copyLink()" data-clipboard-text="{{ url()->current() }}">
         <i class="fas fa-link"></i>&nbsp;<span class="social-media-text" id="copyText">Salin Link</span>
-    </a>
+    </button>
 </div>
 
 <div class="container text-center mt-4">

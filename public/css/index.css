@@ -15,7 +15,6 @@ body {
 
 nav.navbar {
     background-color: var(--black-color) !important;
-    position: relative;
     z-index: 999;
 }
 
@@ -40,10 +39,9 @@ a.nav-link {
     border-left: 1px solid #ccc9c9;
     border-bottom: 1px solid #ccc9c9;
     padding-bottom: 30px;
-    padding-top: 100px;
+    padding-top: 30px;
     padding-right: 20px;
     padding-left: 20px;
-    position: absolute;
     width: 800px;
     height: auto;
     top: 0;
@@ -105,9 +103,21 @@ span.highlight-user {
     text-decoration: underline;
 }
 
+label.label-remind {
+    font-family: 'Spartan', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+}
+
 p.desc {
     font-family: 'Spartan', sans-serif;
     font-weight: 500;
+}
+
+p.total-message {
+    font-family: 'Spartan', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
 }
 
 .input-group {

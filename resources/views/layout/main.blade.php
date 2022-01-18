@@ -10,7 +10,7 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     @livewireStyles
 
-    <title>TeyMii - Sampaikan Pesan Secara Rahasia</title>
+    <title>TeyMii - @yield('title')</title>
 </head>
 <body>
     @include('partials.navbar')

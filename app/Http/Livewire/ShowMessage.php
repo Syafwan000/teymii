@@ -27,7 +27,8 @@ class ShowMessage extends Component
     public function render()
     {
         return view('livewire.show-message', [
-            'messages' => Message::where('user_id', $this->user->id)->latest()->paginate(20)
+            'messages' => Message::where('user_id', $this->user->id)->latest()->paginate(20),
+            'total_messages' => count(Message::where('user_id', $this->user->id)->get())
         ]);
     }
 }

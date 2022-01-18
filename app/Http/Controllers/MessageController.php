@@ -15,9 +15,10 @@ class MessageController extends Controller
 
         $facebook = Share::page($currentURL)->facebook()->getRawLinks();
         $whatsapp = Share::page($currentURL)->whatsapp()->getRawLinks();
-        $telegram = Share::page($currentURL)->telegram()->getRawLinks();
+        $telegram = Share::page($currentURL, 'Sampaikan pesan secara rahasia dengan TeyMii')->telegram()->getRawLinks();
 
         return view('messages', [
+            'title' => $user->name,
             'user' => $user,
             'facebook' => $facebook,
             'whatsapp' => $whatsapp,
