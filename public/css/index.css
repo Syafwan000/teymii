@@ -39,12 +39,14 @@ a.nav-link {
     border-right: 1px solid #ccc9c9;
     border-left: 1px solid #ccc9c9;
     border-bottom: 1px solid #ccc9c9;
+    padding-bottom: 30px;
+    padding-top: 100px;
+    padding-right: 20px;
+    padding-left: 20px;
+    position: absolute;
     width: 800px;
     height: auto;
-    position: absolute;
     top: 0;
-    padding-top: 100px;
-    padding-bottom: 20px;
 }
 
 /* Akhir Wrapper */
@@ -227,3 +229,118 @@ a.dev {
 }
 
 /* Akhir Footer */
+
+/* Pagination */
+
+.page-link {
+    background-color: var(--white-color) !important;
+    color: var(--black-color) !important;
+    border: 1px solid var(--black-color) !important;
+    box-shadow: none !important;
+}
+
+.page-item.active {
+    font-weight: 800 !important;
+}
+
+/* Akhir Pagination */
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    h2.title {
+        font-size: 26px;
+    }
+
+    h3.title {
+        font-size: 24px;
+    }
+
+    .input-group {
+        padding: 0 90px 0 90px;
+    }
+
+    .container.send-message {
+        padding: 0 90px 0 90px;
+    }
+
+    .container.input-name {
+        padding: 0 80px 0 80px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container.wrapper-home {
+        width: 100%;
+    }
+
+    .container.messages {
+        width: 100%;
+    }
+
+    .container.input-name {
+        padding: 0 40px 0 40px;
+    }
+}
+
+@media (max-width: 526px) {
+    h2.title {
+        font-size: 24px;
+    }
+
+    h3.title {
+        font-size: 22px;
+    }
+
+    .input-group {
+        padding: 0 60px 0 60px;
+    }
+
+    .container.send-message {
+        padding: 0 60px 0 60px;
+    }
+    
+    .container.input-name {
+        padding: 0 30px 0 30px;
+    }
+}
+
+@media (max-width: 489px) {
+    label.label-form {
+        font-size: 12px !important;
+    }
+
+    .input-group {
+        padding: 0 40px 0 40px;
+    }
+
+    .container.send-message {
+        padding: 0 40px 0 40px;
+    }
+}
+
+@media (max-width: 410px) {
+    h3.title {
+        font-size: 20px;
+    }
+
+    p.desc {
+        font-size: 14px;
+    }
+
+    .input-group {
+        padding: 0 20px 0 20px;
+    }
+
+    .container.send-message {
+        padding: 0 20px 0 20px;
+    }
+}
+
+@media (max-width: 381px) {
+    .btn-telegram {
+        margin-top: 8px;
+    }
+}
+
+/* Akhir Responsive */
