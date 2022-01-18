@@ -3,7 +3,7 @@
       <a class="navbar-brand" href="/">TeyMii</a>
       <ul class="navbar-nav">
         <li class="nav-item">
-            <a href="https://github.com/Syafwan000" class="nav-link"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/Syafwan000/teymii" target="_blank" class="nav-link"><i class="fab fa-github"></i></a>
         </li>
       </ul>
     </div>
