@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --black-color: rgb(27, 27, 27);
+    --white-color: #fff;
+}
+
+h1.error-404 {
+    font-size: 120px;
+    font-weight: bold;
+    -webkit-text-fill-color: var(--white-color);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--black-color);
+}
+
+h3.error-title {
+    font-family: 'Archivo Black', sans-serif;
+}
+
+p.error-text {
+    font-family: 'Spartan', sans-serif;
+}
+
+.btn-black {
+    background-color: var(--black-color);
+    color: var(--white-color);
+    font-family: 'Spartan', sans-serif;
+    font-size: 14px;
+    padding-top: 12px;
+}
+
+.btn-black:hover {
+    color: var(--white-color);
+}
+
+@media (max-width: 576px) {
+    h1.error-404 {
+        font-size: 110px;
+    }
+
+    h3.error-title {
+        font-size: 21px;
+    }
+
+    p.error-text {
+        font-size: 15px;
+    }
+}
