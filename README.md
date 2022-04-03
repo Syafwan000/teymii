@@ -12,7 +12,7 @@ TeyMii adalah web yang menghubungkan dengan teman/sahabat/orang lain, melalui pe
 
 ## Clone This Repository
 
-- Clone your project
+- Run `git clone https://github.com/Syafwan000/teymii` on your cmd or terminal
 - Go to the folder application using `cd` command on your cmd or terminal
 - Run `composer install` on your cmd or terminal
 - Copy `.env.example` file to `.env` on the root folder
