@@ -14,10 +14,11 @@ class HomeController extends Controller
 
         $facebook = Share::page($currentURL)->facebook()->getRawLinks();
         $whatsapp = Share::page($currentURL)->whatsapp()->getRawLinks();
-        $telegram = Share::page($currentURL, 'Sampaikan pesan secara rahasia dengan TeyMii')->telegram()->getRawLinks();
+        $telegram = Share::page($currentURL, 'Berikan pesan, tanggapan atau apapun itu kepada seseorang tanpa diketahui siapa pengirimnya')->telegram()->getRawLinks();
 
         return view('index', [
-            'title' => 'Sampaikan Pesan Secara Rahasia',
+            'title' => 'TeyMii - Sampaikan Pesan Secara Rahasia',
+            'desc' => 'Berikan pesan, tanggapan atau apapun itu kepada seseorang tanpa diketahui siapa pengirimnya',
             'facebook' => $facebook,
             'whatsapp' => $whatsapp,
             'telegram' => $telegram

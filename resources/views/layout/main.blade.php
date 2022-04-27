@@ -3,6 +3,25 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="TeyMii, Pesan, Rahasia, Pesan Rahasia, Pesan Kaleng">
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="@yield('title')">
+    <meta name="description" content="@yield('desc')">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://teymii.herokuapp.com/">
+    <meta property="og:title" content="@yield('title')">
+    <meta property="og:description" content="@yield('desc')">
+    <meta property="og:image" content="{{ asset('img/Banner.png') }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="http://teymii.herokuapp.com/">
+    <meta property="twitter:title" content="@yield('title')">
+    <meta property="twitter:description" content="@yield('desc')">
+    <meta property="twitter:image" content="{{ asset('img/Banner.png') }}">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -10,7 +29,7 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     @livewireStyles
 
-    <title>TeyMii - @yield('title')</title>
+    <title>@yield('title')</title>
 </head>
 <body>
     @include('partials.navbar')
