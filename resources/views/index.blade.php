@@ -6,6 +6,18 @@
 
 @endsection
 
+@section('desc')
+
+{{ $desc }}
+
+@endsection
+
+@section('link')
+
+{{ $link }}
+
+@endsection
+
 @section('content')
 
 <livewire:create-message></livewire:create-message>
@@ -32,7 +44,7 @@
 
 <div class="container text-center mt-4">
     <p class="label-footer mb-0">TeyMii &copy; 2022</p>
-    <p class="label-footer mb-0">Made by <a class="dev" href="https://www.instagram.com/safvvan_/" target="_blank">Muhammad Syafwan Ardiansyah</a></p>
+    <p class="label-footer mb-0">Made by <a class="dev" href="https://www.instagram.com/syafffwan/" target="_blank">Muhammad Syafwan Ardiansyah</a></p>
 </div>
 
 @endsection

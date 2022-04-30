@@ -19,6 +19,7 @@ class HomeController extends Controller
         return view('index', [
             'title' => 'TeyMii - Sampaikan Pesan Secara Rahasia',
             'desc' => 'Berikan pesan, tanggapan atau apapun itu kepada seseorang tanpa diketahui siapa pengirimnya',
+            'link' => $currentURL,
             'facebook' => $facebook,
             'whatsapp' => $whatsapp,
             'telegram' => $telegram

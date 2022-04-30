@@ -11,14 +11,14 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://teymii.herokuapp.com/">
+    <meta property="og:url" content="@yield('link')">
     <meta property="og:title" content="@yield('title')">
     <meta property="og:description" content="@yield('desc')">
     <meta property="og:image" content="{{ asset('img/Banner.png') }}">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="http://teymii.herokuapp.com/">
+    <meta property="twitter:url" content="@yield('link')">
     <meta property="twitter:title" content="@yield('title')">
     <meta property="twitter:description" content="@yield('desc')">
     <meta property="twitter:image" content="{{ asset('img/Banner.png') }}">

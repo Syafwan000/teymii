@@ -20,6 +20,7 @@ class MessageController extends Controller
         return view('messages', [
             'title' => 'TeyMii - ' . $user->name,
             'desc' => 'Berikan pesan, tanggapan atau apapun itu kepada ' . $user->name . ' tanpa diketahui',
+            'link' => $currentURL,
             'user' => $user,
             'facebook' => $facebook,
             'whatsapp' => $whatsapp,
