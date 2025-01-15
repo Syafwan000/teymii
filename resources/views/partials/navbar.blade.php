@@ -1,4 +1,4 @@
-<nav x-cloak x-data="{ menu: false }" class="flex justify-between items-center px-6 py-4">
+<nav x-cloak x-data="{ menu: false }" class="flex justify-between items-center px-8 pt-6 pb-4">
     {{-- Logo Nav --}}
     <div class="flex gap-3 cursor-default">
         <img class="w-12" src="{{ asset('assets/images/logo.svg') }}" alt="TeyMii" draggable="false">
@@ -15,13 +15,13 @@
     {{-- End Button Menu --}}
     {{-- Nav Menu --}}
     <div class="absolute inset-0 transition-all duration-500 ease-in-out w-full h-full backdrop-blur-2xl bg-blue-100/30 z-20" :class="menu ? 'opacity-100 visible' : 'opacity-0 invisible'">
-        <div class="min-h-full flex flex-col justify-between px-6 pt-20 pb-6">
+        <div class="min-h-full flex flex-col justify-between px-8 pt-20 pb-6">
             <div :class="menu && 'motion-preset-blur-up-lg motion-preset-fade'" class="w-full aspect-video bg-gradient-to-br from-blue-600 via-indigo-500 to-purple-500 rounded-2xl p-6 shadow-lg">
                 {{-- Bjir Ngab --}}
             </div>
             <div class="grid grid-cols-12 gap-5 min-h-40">
                 <div :class="menu && 'motion-preset-blur-right-lg motion-preset-fade'" class="col-span-7 bg-gradient-to-br from-blue-600 to-indigo-500 rounded-2xl p-6 shadow-lg shadow-indigo-500/60">
-                    <p class="font-extrabold text-3xl text-white">Create your own secret!</p>
+                    <p class="font-extrabold text-3xl text-white leading-relaxed">Say the unsayable! 🗣️🗣️🔥🔥</p>
                 </div>
                 <div class="grid grid-cols-2 col-span-5 gap-5 rounded-2xl">
                     <button :class="menu && 'motion-preset-blur-down-lg motion-preset-fade'" class="group col-span-2 flex justify-center items-center bg-gray-200 rounded-2xl border border-gray-300 shadow-lg hover:border-indigo-500/30 hover:shadow-indigo-500/30">
