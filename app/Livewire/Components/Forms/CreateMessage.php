@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Livewire;
+namespace App\Livewire\Components\Forms;
 
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 
 class CreateMessage extends Component
 {
-    #[Validate('required')]
+    #[Validate('required|min:3|max:40')]
     public $name;
 
-    #[Validate('required')]
-    public $desc;
+    #[Validate('max:255')]
+    public $description;
 
     public function create()
     {
@@ -20,6 +20,6 @@ class CreateMessage extends Component
 
     public function render()
     {
-        return view('livewire.create-message');
+        return view('components.forms.create-message');
     }
 }

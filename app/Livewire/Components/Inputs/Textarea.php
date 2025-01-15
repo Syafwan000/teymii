@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Forms;
+namespace App\Livewire\Components\Inputs;
 
 use Livewire\Attributes\Modelable;
 use Livewire\Component;
@@ -21,6 +21,6 @@ class Textarea extends Component
 
     public function render()
     {
-        return view('livewire.forms.textarea');
+        return view('components.inputs.textarea');
     }
 }
