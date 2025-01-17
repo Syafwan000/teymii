@@ -8,6 +8,7 @@ class Contact extends Component
 {
     public function render()
     {
-        return view('pages.contact');
+        return view('pages.contact')
+            ->title('Contact — TeyMii');
     }
 }

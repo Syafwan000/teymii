@@ -3,6 +3,7 @@
 namespace App\Livewire\Components\Inputs;
 
 use Livewire\Attributes\Modelable;
+use Livewire\Attributes\Reactive;
 use Livewire\Component;
 
 class Field extends Component
@@ -10,7 +11,10 @@ class Field extends Component
     #[Modelable]
     public $value;
 
-    public $label, $trigger, $type, $error, $placeholder;
+    #[Reactive]
+    public $error;
+
+    public $label, $trigger, $type, $placeholder;
 
     public function mount($label, $trigger, $type, $error, $placeholder)
     {

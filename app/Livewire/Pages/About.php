@@ -8,6 +8,7 @@ class About extends Component
 {
     public function render()
     {
-        return view('pages.about');
+        return view('pages.about')
+            ->title('About — TeyMii');
     }
 }

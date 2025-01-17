@@ -64,7 +64,20 @@
     }
 }
 
-@layer components {}
+@layer components {
+    .text-title {
+        @apply font-extrabold text-2xl pl-6 relative before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-3 before:h-3 before:bg-gradient-to-br before:from-blue-600 before:to-indigo-500 before:rounded-full;
+    }
+
+    .text-paragraph {
+        @apply leading-loose text-justify indent-6;
+    }
+
+    .text-highlight {
+        @apply underline underline-offset-4 decoration-2 decoration-blue-600 decoration-dashed;
+    }
+}
+
 @layer utilities {}
 
 [x-cloak] {
