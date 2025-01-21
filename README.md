@@ -1,5 +1,7 @@
 
-![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Syafwan000/teymii/refs/heads/main/public/assets/images/logo-readme.png" alt="TeyMii Logo">
+</p>
 
 
 # 💬❔TeyMii — Create your own secret! ❔💬
@@ -12,6 +14,7 @@ TeyMii is an anonymous messaging app that allows you to connect with others with
 - Send and receive messages
 - Shareable messages
 - Light/dark mode toggle
+- Interesting animation
 
 
 ## Installation
@@ -57,4 +60,4 @@ TeyMii is an anonymous messaging app that allows you to connect with others with
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](https://choosealicense.com/licenses/mit/) file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/Syafwan000/teymii/blob/main/LICENSE) file for details.
