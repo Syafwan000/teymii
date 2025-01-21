@@ -8,10 +8,10 @@
         </div>
     </div>
     <div class="relative w-full overflow-x-hidden min-h-44 pt-10">
-        <div class="absolute w-[1000px] left-1/2 -translate-x-1/2 bg-blue-600 text-white text-center -rotate-[7deg]">
+        <div class="motion-preset-slide-down-left motion-duration-1000 absolute w-[1000px] left-1/2 -translate-x-1/2 bg-blue-600 text-white text-center -rotate-[7deg]">
             <p class="font-semibold py-1">TeyMii • TeyMii • TeyMii • TeyMii • TeyMii • TeyMii • TeyMii • TeyMii • TeyMii • TeyMii • TeyMii • TeyMii • TeyMii • TeyMii • TeyMii</p>
         </div>
-        <div class="absolute w-[1000px] left-1/2 -translate-x-1/2 bg-gray-200 text-blue-600 text-center rotate-[7deg]">
+        <div class="motion-preset-slide-down-right motion-duration-1000 absolute w-[1000px] left-1/2 -translate-x-1/2 bg-gray-200 text-blue-600 text-center rotate-[7deg]">
             <p class="font-semibold py-1">About • About • About • About • About • About • About • About • About • About • About • About • About • About • About</p>
         </div>
     </div>

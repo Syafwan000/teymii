@@ -83,3 +83,20 @@
 [x-cloak] {
     @apply !hidden;
 }
+
+#message-card {
+    animation-name: growing;
+    animation-duration: 1s;
+    animation-direction: linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 15%;
+}
+
+@keyframes growing {
+    from {
+        transform: scale(0.5);
+    }
+    to {
+        transform: scale(1);
+    }
+}

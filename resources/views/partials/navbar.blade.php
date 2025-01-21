@@ -1,23 +1,25 @@
-<nav x-cloak x-data="{ menu: false }" class="sticky top-0 flex justify-between items-center px-8 pt-6 pb-4 z-50">
-    {{-- Logo Nav --}}
-    <a wire:navigate href="{{ route('home') }}" class="flex gap-3">
-        <img class="w-12" src="{{ asset('assets/images/logo.svg') }}" alt="TeyMii" draggable="false">
-        <div class="flex flex-col text-slate-700">
-            <p class="text-xl font-extrabold">TeyMii</p>
-            <p class="text-sm">Create your own secret</p>
-        </div>
-    </a>
-    {{-- End Logo Nav --}}
-    {{-- Button Menu --}}
-    <button @click="menu = !menu" class="relative flex justify-center items-center rounded-full z-30 before:absolute before:-inset-1 before:transition-all before:duration-200 before:ease-in-out before:aspect-square before:w-8 before:flex before:justify-center before:items-center before:rounded-full before:scale-0 before:hover:bg-gray-200 before:hover:scale-100">
-        <span :class="menu ? 'icon-[fluent--dismiss-24-filled] motion-rotate-in-[180deg]' : 'icon-[fluent--grid-24-filled] motion-rotate-out-[180deg]'" class="w-6 h-6 text-slate-700"></span>
-    </button>
-    {{-- End Button Menu --}}
+<nav x-cloak x-data="{ menu: false, scrolled: false }" @scroll.window="scrolled = (window.pageYOffset < 10) ? false : true" class="sticky top-0 px-8 pt-6 pb-4 z-50">
+    <div :class="scrolled && 'bg-gray-400/30 backdrop-blur-lg rounded-2xl p-3'" class="transition-all duration-300 ease-in-out flex justify-between items-center z-[100]">
+        {{-- Logo Nav --}}
+        <a wire:navigate href="{{ route('home') }}" class="flex gap-3">
+            <img class="w-12" src="{{ asset('assets/images/logo.svg') }}" alt="TeyMii" draggable="false">
+            <div class="flex flex-col text-slate-700">
+                <p class="text-xl font-extrabold">TeyMii</p>
+                <p class="text-sm">Create your own secret</p>
+            </div>
+        </a>
+        {{-- End Logo Nav --}}
+        {{-- Button Menu --}}
+        <button @click="menu = !menu" class="relative flex justify-center items-center rounded-full z-[100] before:absolute before:-inset-1 before:transition-all before:duration-200 before:ease-in-out before:aspect-square before:w-8 before:flex before:justify-center before:items-center before:rounded-full before:scale-0 before:hover:bg-gray-200 before:hover:scale-100">
+            <span :class="menu ? 'icon-[fluent--dismiss-24-filled] motion-rotate-in-[180deg]' : 'icon-[fluent--grid-24-filled] motion-rotate-out-[180deg]'" class="w-6 h-6 text-slate-700"></span>
+        </button>
+        {{-- End Button Menu --}}
+    </div>
     {{-- Nav Menu --}}
-    <div class="fixed inset-0 left-1/2 -translate-x-1/2 transition-all duration-500 ease-in-out max-w-screen-sm w-full max-h-screen h-full backdrop-blur-2xl bg-blue-100/30 z-20" :class="menu ? 'opacity-100 visible' : 'opacity-0 invisible'">
+    <div class="fixed inset-0 left-1/2 -translate-x-1/2 transition-all duration-500 ease-in-out max-w-screen-sm w-full max-h-screen h-full backdrop-blur-xl bg-blue-100/30 z-20" :class="menu ? 'opacity-100 visible' : 'opacity-0 invisible'">
         <div class="min-h-full flex flex-col justify-between px-8 pt-20 pb-6">
             <div :class="menu && 'motion-preset-blur-up-lg motion-preset-fade'" class="w-full aspect-video bg-gradient-to-br from-blue-600 via-indigo-500 to-purple-500 rounded-2xl p-6 shadow-lg">
-                Mama Aku Masuk Yutub!!!
+                {{-- Gatau mau diisi apa --}}
             </div>
             <div class="grid grid-cols-12 gap-5 min-h-40">
                 <div :class="menu && 'motion-preset-blur-right-lg motion-preset-fade'" class="col-span-8 bg-gradient-to-br from-blue-600 to-indigo-500 rounded-2xl p-6 shadow-lg shadow-indigo-500/60">
