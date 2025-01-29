@@ -27,6 +27,11 @@ class ViewMessage extends Component
         $this->messages = $user->messages;
     }
 
+    public function refreshMessage()
+    {
+        $this->messages = $this->user->messages;
+    }
+
     public function render()
     {
         return view('components.forms.view-message');

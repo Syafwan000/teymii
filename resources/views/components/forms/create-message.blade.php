@@ -8,14 +8,14 @@
                     <span class="text-sm">{{ $total_messages }} Messages</span>
                 </div>
             </div>
-            <a href="{{ route('message', session('instance_user')->slug) }}" class="transition-all duration-300 ease-in-out min-w-56 inline-flex justify-center gap-2 items-center bg-gradient-to-br from-blue-600 to-indigo-500 text-white font-extrabold px-6 py-3 rounded-lg shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/60 hover:opacity-80">
+            <a wire:navigate href="{{ route('message', session('instance_user')->slug) }}" class="transition-all duration-300 ease-in-out min-w-56 inline-flex justify-center gap-2 items-center bg-gradient-to-br from-blue-600 to-indigo-500 text-white font-extrabold px-6 py-3 rounded-lg shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/60 hover:opacity-80">
                 <span wire:loading.remove>My Messages</span>
                 <i wire:loading.remove class="icon-[stash--paperplane-solid] w-6 h-6 text-white"></i>
                 <i wire:loading class="icon-[line-md--loading-twotone-loop] w-6 h-6 text-white"></i>
             </a>
         </div>
     @else
-        <form wire:submit="create" class="space-y-6">
+        <form wire:submit.prevent="create" class="space-y-6" onkeydown="return event.key != 'Enter';">
             <div class="flex flex-col gap-7">
                 <livewire:components.inputs.field
                     wire:model="name"

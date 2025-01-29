@@ -1,8 +1,10 @@
-import { addDynamicIconSelectors } from '@iconify/tailwind'
 import tailwindcssMotion from "tailwindcss-motion"
+import defaultTheme from 'tailwindcss/defaultTheme'
+import { addDynamicIconSelectors } from '@iconify/tailwind'
 
 /** @type {import('tailwindcss').Config} */
 export default {
+    darkMode: ['class'],
     content: [
         "./resources/**/*.blade.php",
         "./resources/**/*.js",
@@ -11,7 +13,7 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                'manrope': ['Manrope', 'sans-serif'],
+                'sans': ['Manrope', ...defaultTheme.fontFamily.sans],
             }
         },
     },

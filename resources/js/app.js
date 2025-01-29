@@ -17,4 +17,17 @@ document.addEventListener('alpine:init', () => {
             }, 1000)
         }
     }))
+
+    Alpine.data('song', () => ({
+        focus: false,
+        dropdown: true,
+
+        focusIn() {
+            this.focus = true
+            this.dropdown = true
+        },
+        focusOut() {
+            this.focus = false
+        }
+    }))
 })

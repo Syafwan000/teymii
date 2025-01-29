@@ -1,5 +1,5 @@
 <section class="flex flex-col gap-12">
-    <div class="space-y-8 px-8">
+    <div class="space-y-8 px-4 sm:px-8">
         <livewire:components.inputs.back />
         <div class="text-slate-700 space-y-3">
             <h1 class="text-title">About</h1>

@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Message extends Model
 {
     protected $fillable = [
-        'message'
+        'message',
+        'song'
     ];
 
     public function user(): BelongsTo

@@ -1,83 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-    @font-face {
-        font-family: 'Manrope';
-        src: url(../../public/assets/fonts/Manrope-ExtraLight.ttf) format('truetype');
-        font-weight: 200;
-        font-style: normal;
-        font-display: swap;
-    }
-
-    @font-face {
-        font-family: 'Manrope';
-        src: url(../../public/assets/fonts/Manrope-Light.ttf) format('truetype');
-        font-weight: 300;
-        font-style: normal;
-        font-display: swap;
-    }
-
-    @font-face {
-        font-family: 'Manrope';
-        src: url(../../public/assets/fonts/Manrope-Regular.ttf) format('truetype');
-        font-weight: 400;
-        font-style: normal;
-        font-display: swap;
-    }
-
-    @font-face {
-        font-family: 'Manrope';
-        src: url(../../public/assets/fonts/Manrope-Medium.ttf) format('truetype');
-        font-weight: 500;
-        font-style: normal;
-        font-display: swap;
-    }
-
-    @font-face {
-        font-family: 'Manrope';
-        src: url(../../public/assets/fonts/Manrope-SemiBold.ttf) format('truetype');
-        font-weight: 600;
-        font-style: normal;
-        font-display: swap;
-    }
-
-    @font-face {
-        font-family: 'Manrope';
-        src: url(../../public/assets/fonts/Manrope-Bold.ttf) format('truetype');
-        font-weight: 700;
-        font-style: normal;
-        font-display: swap;
-    }
-
-    @font-face {
-        font-family: 'Manrope';
-        src: url(../../public/assets/fonts/Manrope-ExtraBold.ttf) format('truetype');
-        font-weight: 800;
-        font-style: normal;
-        font-display: swap;
-    }
-
-    * {
-        @apply font-manrope;
-    }
-}
-
+@layer base {}
 @layer components {
     .text-title {
-        @apply font-extrabold text-2xl pl-6 relative before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-3 before:h-3 before:bg-gradient-to-br before:from-blue-600 before:to-indigo-500 before:rounded-full;
+        @apply font-extrabold text-xl pl-6 relative before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-3 before:h-3 before:bg-gradient-to-br before:from-blue-600 before:to-indigo-500 before:rounded-full sm:text-2xl;
     }
 
     .text-paragraph {
-        @apply leading-loose text-justify indent-6;
+        @apply leading-loose text-justify indent-6 text-sm sm:leading-loose sm:text-base;
     }
 
     .text-highlight {
         @apply underline underline-offset-4 decoration-2 decoration-blue-600 decoration-dashed;
     }
 }
-
 @layer utilities {}
 
 [x-cloak] {
