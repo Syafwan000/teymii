@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Components\Forms;
 
+use App\Models\Message;
 use App\Models\User;
 use Livewire\Attributes\On;
 use Livewire\Component;
@@ -13,27 +14,31 @@ class ViewMessage extends Component
 
     public User $user;
 
-    public $messages;
+    public $allMessages;
 
     #[On('sent-message')]
     public function refreshData()
     {
-        $this->messages = $this->user->messages;
+        $this->allMessages = $this->user->messages;
     }
 
     public function mount($user)
     {
         $this->user = $user;
-        $this->messages = $user->messages;
+        $this->allMessages = $user->messages;
     }
 
-    public function refreshMessage()
+    public function paginationView()
     {
-        $this->messages = $this->user->messages;
+        return 'components.display.pagination';
     }
 
     public function render()
     {
-        return view('components.forms.view-message');
+        $messages = Message::with('user')->where('user_id', $this->user->id)->latest()->paginate(5);
+
+        return view('components.forms.view-message', [
+            'messages' => $messages,
+        ]);
     }
 }

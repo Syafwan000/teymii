@@ -1,14 +1,16 @@
 <div class="max-w-md mx-auto flex flex-col gap-5">
-    @if($messages->count() > 0)
+    @if($allMessages->count() > 0)
         <div class="flex justify-between">
-            <p class="font-semibold">{{ $messages->count() }} Messages</p>
-            <button wire:click="refreshMessage" class="flex items-center gap-1">
-                <span class="icon-[humbleicons--refresh] w-5 h-5"></span>
-                Refresh
-            </button>
+            <p class="font-semibold">{{ $allMessages->count() }} Messages</p>
+            @if(session()->has('instance_user'))
+                <button wire:click="refreshData" class="group flex items-center gap-1">
+                    <span class="icon-[humbleicons--refresh] w-5 h-5 group-active:motion-rotate-in-180"></span>
+                    Refresh
+                </button>
+            @endif
         </div>
         @foreach($messages as $message)
-            <div id="message-card" class="flex flex-col gap-3 justify-between text-left w-full bg-gray-200 rounded-lg min-h-24 p-5 shadow-md">
+            <div id="message-card" class="flex flex-col gap-3 justify-between text-left w-full bg-gray-200 rounded-lg min-h-24 p-5 shadow-md dark:text-slate-200 dark:bg-gray-600">
                 <div class="space-y-1">
                     <h3 class="font-bold">{{ $message->user->anon_name ?? 'Anonymous' }}</h3>
                     <p>"{{ $message->message }}"</p>
@@ -19,6 +21,9 @@
                 @endif
             </div>
         @endforeach
+        <div class="mt-6">
+            {{ $messages->links() }}
+        </div>
     @else
         <p class="font-semibold tracking-wide text-slate-400 cursor-default py-20">No Messages</p>
     @endif

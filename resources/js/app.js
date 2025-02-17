@@ -31,3 +31,17 @@ document.addEventListener('alpine:init', () => {
         }
     }))
 })
+
+document.documentElement.classList.toggle(
+    'dark',
+    localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+)
+
+document.querySelector('#theme-switcher').addEventListener('click', () => {
+    localStorage.theme = localStorage.theme === 'dark' ? 'light' : 'dark'
+    if(localStorage.theme === 'dark') {
+        document.documentElement.classList.add('dark')
+    } else {
+        document.documentElement.classList.remove('dark')
+    }
+})

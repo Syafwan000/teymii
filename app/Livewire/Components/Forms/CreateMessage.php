@@ -31,6 +31,7 @@ class CreateMessage extends Component
             'anon_name' => $this->anon_name,
             'desc' => $this->description,
             'slug' => $createRandomSlug,
+            'expired_at' => now()->addDays(7),
         ]);
 
         session(['instance_user' => $user]);

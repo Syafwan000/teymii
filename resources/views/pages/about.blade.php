@@ -1,7 +1,7 @@
 <section class="flex flex-col gap-12">
     <div class="space-y-8 px-4 sm:px-8">
         <livewire:components.inputs.back />
-        <div class="text-slate-700 space-y-3">
+        <div class="text-slate-700 space-y-3 dark:text-slate-200">
             <h1 class="text-title">About</h1>
             <p class="text-paragraph">TeyMii is an anonymous messaging app that allows you to connect with others <span class="text-highlight">without revealing your identity</span>. This anonymity empowers you to express yourself freely, <span class="text-highlight">without the constraints of social expectations</span>.</p>
             <p class="text-paragraph">Express yourself freely, share your thoughts and feelings, and engage in honest conversations <span class="text-highlight">without fear of judgment</span>. TeyMii provides a safe and secure space for authentic communication.</p>

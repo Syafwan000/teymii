@@ -15,7 +15,7 @@
     }
 
     .text-highlight {
-        @apply underline underline-offset-4 decoration-2 decoration-blue-600 decoration-dashed;
+        @apply underline underline-offset-4 decoration-2 decoration-blue-600 decoration-dashed dark:decoration-blue-500;
     }
 }
 @layer utilities {}
@@ -29,7 +29,7 @@
     animation-duration: 1s;
     animation-direction: linear forwards;
     animation-timeline: view();
-    animation-range: entry 0 cover 15%;
+    animation-range: entry 0 cover 20%;
 }
 
 @keyframes growing {

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('anon_name')->nullable();
             $table->string('desc')->nullable();
             $table->string('slug')->unique();
+            $table->date('expired_at');
             $table->timestamps();
         });
 
@@ -36,7 +37,6 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('users');
-        Schema::dropIfExists('password_reset_tokens');
         Schema::dropIfExists('sessions');
     }
 };

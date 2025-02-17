@@ -1,12 +1,9 @@
 <div class="max-w-md mx-auto">
     @if(session()->has('instance_user'))
-        <div class="inline-flex flex-col gap-6">
-            <div class="flex justify-center items-center gap-4">
-                <span class="icon-[mingcute--mail-ai-fill] motion-preset-seesaw-md w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-500"></span>
-                <div class="inline-flex flex-col cursor-default">
-                    <p class="max-w-max mx-auto text-xl font-semibold">{{ session('instance_user')->name }}</p>
-                    <span class="text-sm">{{ $total_messages }} Messages</span>
-                </div>
+        <div class="max-w-xs inline-flex flex-col gap-6">
+            <div class="inline-flex flex-col items-center cursor-default text-slate-700 dark:text-slate-200">
+                <p class="text-xl font-semibold">{{ session('instance_user')->name }}</p>
+                <span class="text-sm">{{ $total_messages }} Messages</span>
             </div>
             <a wire:navigate href="{{ route('message', session('instance_user')->slug) }}" class="transition-all duration-300 ease-in-out min-w-56 inline-flex justify-center gap-2 items-center bg-gradient-to-br from-blue-600 to-indigo-500 text-white font-extrabold px-6 py-3 rounded-lg shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/60 hover:opacity-80">
                 <span wire:loading.remove>My Messages</span>

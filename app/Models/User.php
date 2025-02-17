@@ -22,6 +22,7 @@ class User extends Authenticatable
         'anon_name',
         'desc',
         'slug',
+        'expired_at',
     ];
 
     public function messages(): HasMany
