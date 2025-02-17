@@ -56,7 +56,14 @@ TeyMii is an anonymous messaging app that allows you to connect with others with
       npm run dev
       php artisan serve
     ```
+    
+## Artisan Command
 
+Run this command in a cron job to clear expired messages (older than 7 days)
+
+```bash
+  php artisan clear:message
+```
 
 ## License
 
