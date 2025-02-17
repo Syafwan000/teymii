@@ -2,7 +2,7 @@
     <div class="flex justify-center gap-3">
         <a wire:navigate href="{{ route('about') }}" wire:current="underline underline-offset-2 decoration-wavy" class="text-blue-700 font-medium dark:text-blue-200">About</a>
         <a wire:navigate href="{{ route('contact') }}" wire:current="underline underline-offset-2 decoration-wavy" class="text-blue-700 font-medium dark:text-blue-200">Contact</a>
-        <a href="https://tally.so" target="_blank" class="flex gap-0.5 text-blue-700 font-medium lg:hidden">
+        <a href="https://tally.so" target="_blank" class="flex gap-0.5 text-blue-700 font-medium lg:hidden dark:text-blue-200">
             Send Feedback
             <span class="icon-[material-symbols--arrow-insert-rounded] -scale-x-100 w-5 h-5"></span>
         </a>

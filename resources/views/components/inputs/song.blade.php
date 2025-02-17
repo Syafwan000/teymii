@@ -1,10 +1,10 @@
 <div x-data="song" class="relative text-left text-slate-700 space-y-1.5">
     <div class="space-y-2">
-        <input wire:model.live="value" @focusin="focusIn" @focusout="focusOut" type="{{ $type }}" id="{{ $trigger }}" placeholder="{{ $placeholder }}" class="transition-all duration-300 ease-in-out w-full h-8 border border-gray-200 rounded-lg pl-3.5 pr-10 pt-6 pb-5 outline-none focus:border-blue-500 focus:ring focus:ring-blue-500/30 dark:bg-gray-200 dark:border-gray-300">
+        <input wire:model.live="value" @focusin="focusIn" @focusout="focusOut" type="{{ $type }}" id="{{ $trigger }}" placeholder="{{ $placeholder }}" class="transition-all duration-300 ease-in-out w-full h-8 border border-gray-200 rounded-lg pl-3.5 pr-10 pt-6 pb-5 outline-none focus:border-blue-500 focus:ring focus:ring-blue-500/30 dark:text-slate-200 dark:bg-gray-600 dark:border-gray-700">
         <label for="{{ $trigger }}" :class="focus ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-300'" class="absolute transition-all duration-300 font-semibold text-xs rounded-md px-3 py-px left-3 -top-4 z-10">{{ $label }}</label>
         @if($value || $selectedSong)
             <button type="button" wire:click="resetSong" class="absolute w-6 h-6 top-1 right-3">
-                <span class="icon-[material-symbols--close-rounded] w-6 h-6 transition-all duration-300 ease-in-out text-gray-200 hover:text-gray-400"></span>
+                <span class="icon-[material-symbols--close-rounded] w-6 h-6 transition-all duration-300 ease-in-out text-gray-200 hover:text-gray-400 dark:text-gray-500 dark:hover:text-gray-400"></span>
             </button>
         @endif
     </div>

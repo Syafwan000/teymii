@@ -7,8 +7,8 @@
             id="{{ $trigger }}"
             placeholder="{{ $placeholder }}"
             maxlength="{{ $maxlength }}"
-            class="transition-all duration-300 ease-in-out w-full h-28 border rounded-lg px-3.5 pt-4 pb-5 outline-none dark:bg-gray-200"
-            :class="$wire.error ? 'border-rose-600 focus:border-rose-500 focus:ring focus:ring-rose-500/30' : 'border-gray-200 focus:border-blue-500 focus:ring focus:ring-blue-500/30 dark:border-gray-300'"
+            class="transition-all duration-300 ease-in-out w-full h-28 border rounded-lg px-3.5 pt-4 pb-5 outline-none dark:text-slate-200 dark:bg-gray-600"
+            :class="$wire.error ? 'border-rose-600 focus:border-rose-500 focus:ring focus:ring-rose-500/30' : 'border-gray-200 focus:border-blue-500 focus:ring focus:ring-blue-500/30 dark:border-gray-700'"
         ></textarea>
         <label
             for="{{ $trigger }}"
