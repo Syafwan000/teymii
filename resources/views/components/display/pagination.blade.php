@@ -1,6 +1,6 @@
 @if ($paginator->hasPages())
     <ul
-        class="flex items-center justify-center font-inter gap-x-1 font-semibold">
+        class="flex items-center justify-center gap-x-1 font-semibold">
         {{-- First Page Link --}}
         @if ($paginator->onFirstPage())
             <li class="disabled opacity-50">
