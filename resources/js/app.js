@@ -1,7 +1,12 @@
 import ClipboardJS from 'clipboard'
 import './bootstrap'
 
-if (document.querySelector('#share-link')) { new ClipboardJS('#share-link') }
+if (document.querySelector('#share-link')) {
+    document.addEventListener('DOMContentLoaded', () => {
+        new ClipboardJS('#share-link')
+    })
+}
+
 document.addEventListener('alpine:init', () => {
     Alpine.data('share', () => ({
         text: 'Share',
