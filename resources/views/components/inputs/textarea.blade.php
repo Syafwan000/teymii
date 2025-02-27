@@ -18,7 +18,7 @@
         <span
             x-text="{{ $maxlength }} - $wire.value.length"
             class="absolute -top-1 right-2 text-xs font-semibold cursor-default"
-            :class="$wire.error ? 'text-rose-600' : 'text-blue-500'"
+            :class="$wire.error ? 'text-rose-600' : 'text-blue-500 dark:text-gray-200'"
         ></span>
     </div>
     <p class="text-left text-sm text-rose-600 pl-1 dark:text-rose-300">{{ $error }}</p>

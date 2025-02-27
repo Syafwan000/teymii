@@ -10,16 +10,22 @@
         </a>
         {{-- End Logo Nav --}}
         {{-- Button Menu --}}
-        <button @click="menu = !menu" class="relative flex justify-center items-center rounded-full z-[100] before:absolute before:-inset-1 before:transition-all before:duration-200 before:ease-in-out before:aspect-square before:w-8 before:flex before:justify-center before:items-center before:rounded-full before:scale-0 before:hover:bg-gray-200 before:hover:scale-100 dark:before:hover:bg-gray-600">
-            <span :class="menu ? 'icon-[fluent--dismiss-24-filled] motion-rotate-in-[180deg]' : 'icon-[fluent--grid-24-filled] motion-rotate-out-[180deg]'" class="w-6 h-6 text-slate-700 dark:text-slate-200"></span>
+        <button @click="menu = !menu" class="relative flex justify-center items-center rounded-full before:absolute before:-inset-1 before:transition-all before:duration-200 before:ease-in-out before:aspect-square before:w-8 before:flex before:justify-center before:items-center before:rounded-full before:scale-0 before:hover:bg-gray-200 before:hover:scale-100 dark:before:hover:bg-gray-600">
+            <span class="icon-[fluent--grid-24-filled] w-6 h-6 text-slate-700 dark:text-slate-200"></span>
         </button>
         {{-- End Button Menu --}}
     </div>
     {{-- Nav Menu --}}
     <div class="fixed inset-0 left-1/2 -translate-x-1/2 transition-all duration-500 ease-in-out max-w-screen-sm w-full max-h-screen h-full backdrop-blur-xl bg-blue-100/60 z-20 dark:bg-gray-700/60" :class="menu ? 'opacity-100 visible' : 'opacity-0 invisible'">
+        <button @click="menu = !menu" class="absolute top-7 right-4 flex justify-center items-center rounded-full z-[100] before:absolute before:-inset-1 before:transition-all before:duration-200 before:ease-in-out before:aspect-square before:w-8 before:flex before:justify-center before:items-center before:rounded-full before:scale-0 before:hover:bg-gray-200 before:hover:scale-100 dark:before:hover:bg-gray-600 sm:top-9 sm:right-8">
+            <span class="icon-[fluent--dismiss-24-filled] motion-rotate-out-[180deg] w-6 h-6 text-slate-700 dark:text-slate-200"></span>
+        </button>
         <div class="min-h-full flex flex-col justify-between px-4 pt-20 pb-6 sm:px-8">
-            <div :class="menu && 'motion-preset-blur-up-lg motion-preset-fade'" class="w-full aspect-video bg-gradient-to-br from-blue-600 via-indigo-500 to-purple-500 rounded-2xl p-6 shadow-lg dark:shadow-indigo-500/30">
-                {{-- Gatau mau diisi apa --}}
+            <div :class="menu && 'motion-preset-blur-up-lg motion-preset-fade'" class="relative w-full aspect-video bg-gradient-to-br from-blue-600 via-indigo-500 to-purple-500 rounded-2xl p-6 shadow-lg overflow-hidden dark:shadow-indigo-500/30">
+                <img class="absolute -bottom-1 left-1/2 -translate-x-1/2 hidden min-[500px]:block" src="{{ asset('assets/images/banner.png') }}" alt="Banner">
+                <p class="text-white font-semibold text-3xl block leading-relaxed italic min-[500px]:hidden">
+                    <span class="font-black not-italic">TeyMii</span> — Create your own secret!
+                </p>
             </div>
             <div class="grid grid-cols-12 gap-3 min-h-40 min-[550px]:gap-5">
                 <div :class="menu && 'motion-preset-blur-right-lg motion-preset-fade'" class="col-span-12 bg-gradient-to-br from-blue-600 to-indigo-500 rounded-2xl p-6 shadow-lg order-2 min-[550px]:col-span-8 min-[550px]:order-1 dark:shadow-indigo-500/30">

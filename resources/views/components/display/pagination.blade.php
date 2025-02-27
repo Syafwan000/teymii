@@ -51,7 +51,7 @@
                     </li>
                 @else
                     <li><a wire:navigate href="{{ $paginator->url($i) }}">
-                        <div class="transition-all duration-300 ease-in-out inline-flex w-8 aspect-square items-center justify-center rounded-lg bg-gray-100 text-center hover:bg-gray-200 dark:text-slate-700 dark:bg-gray-200 dark:hover:bg-gray-300">
+                        <div class="transition-all duration-300 ease-in-out inline-flex w-8 aspect-square items-center justify-center rounded-lg bg-gray-200 text-center hover:bg-gray-300 dark:text-slate-700 dark:bg-gray-200 dark:hover:bg-gray-300">
                             {{ $i }}
                         </div>
                     </a></li>

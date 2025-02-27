@@ -3,10 +3,12 @@
         <div class="flex justify-between">
             <p class="font-semibold">{{ $allMessages->count() }} Messages</p>
             @if(session()->has('instance_user'))
-                <button wire:click="refreshData" class="group flex items-center gap-1">
-                    <span class="icon-[humbleicons--refresh] w-5 h-5 group-active:motion-rotate-in-180"></span>
-                    Refresh
-                </button>
+                @if(session('instance_user')->slug === $user->slug)
+                    <button wire:click="refreshData" class="group flex items-center gap-1">
+                        <span class="icon-[humbleicons--refresh] w-5 h-5 group-active:motion-rotate-in-180"></span>
+                        Refresh
+                    </button>
+                @endif
             @endif
         </div>
         @foreach($messages as $message)

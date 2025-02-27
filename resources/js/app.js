@@ -37,11 +37,13 @@ document.documentElement.classList.toggle(
     localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
 )
 
-document.querySelector('#theme-switcher').addEventListener('click', () => {
-    localStorage.theme = localStorage.theme === 'dark' ? 'light' : 'dark'
-    if(localStorage.theme === 'dark') {
-        document.documentElement.classList.add('dark')
-    } else {
-        document.documentElement.classList.remove('dark')
-    }
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('#theme-switcher').addEventListener('click', () => {
+        localStorage.theme = localStorage.theme === 'dark' ? 'light' : 'dark'
+        if(localStorage.theme === 'dark') {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    })
 })

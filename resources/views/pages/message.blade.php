@@ -9,7 +9,13 @@
         </div>
         <div class="space-y-10">
             <livewire:components.inputs.share :user="$user" />
-            @if(!session()->has('instance_user'))<livewire:components.forms.send-message :user="$user" />@endif
+            @if(session()->has('instance_user'))
+                @if(session('instance_user')->slug !== $user->slug)
+                    <livewire:components.forms.send-message :user="$user" />
+                @endif
+            @else
+                <livewire:components.forms.send-message :user="$user" />
+            @endif
             <livewire:components.forms.view-message :user="$user" />
         </div>
     </div>
