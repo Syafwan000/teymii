@@ -43,6 +43,13 @@ TeyMii is an anonymous messaging app that allows you to connect with others with
      DB_CONNECTION=mysql
    ```
 
+5. Add `SPOTIFY_CLIENT_ID` and `SPOTIFY_CLIENT_SECRET` in .env file
+
+   ```bash
+     SPOTIFY_CLIENT_ID=your-spotify-client-id
+     SPOTIFY_CLIENT_SECRET=your-spotify-client-secret
+   ```
+
 6. Install dependencies
 
     ```bash
