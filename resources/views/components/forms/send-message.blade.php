@@ -4,8 +4,7 @@
         label="Message"
         trigger="message"
         :error="$errors->has('message') ? $errors->first('message') : null"
-        placeholder="e.g. aku ngepens nich"
-        maxlength="255" />
+        placeholder="e.g. aku ngepens nich" />
     <livewire:components.inputs.song
         wire:model="song"
         label="Song (optional)"

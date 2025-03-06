@@ -19,3 +19,13 @@
         </a>
     </div>
 </div>
+
+@assets
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+@endassets
+
+@script
+<script>
+    new ClipboardJS('#share-link')
+</script>
+@endscript

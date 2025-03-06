@@ -14,15 +14,14 @@ class Textarea extends Component
     #[Reactive]
     public $error;
 
-    public $label, $trigger, $placeholder, $maxlength;
+    public $label, $trigger, $placeholder;
 
-    public function mount($label, $trigger, $error, $placeholder, $maxlength)
+    public function mount($label, $trigger, $error, $placeholder)
     {
         $this->label = $label;
         $this->trigger = $trigger;
         $this->error = $error;
         $this->placeholder = $placeholder;
-        $this->maxlength = $maxlength;
     }
 
     public function render()
