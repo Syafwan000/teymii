@@ -9,7 +9,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/favicon/favicon-16x16.png') }}">
     <link rel="manifest" href="{{ asset('assets/favicon/site.webmanifest') }}">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <title>@yield('title') — TeyMii</title>
+    <title>@yield('title')</title>
 </head>
 <body class="antialiased">
     <div class="flex items-center justify-center h-dvh bg-gray-50 px-4 dark:bg-gray-700">
