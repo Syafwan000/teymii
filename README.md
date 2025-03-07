@@ -37,7 +37,7 @@ TeyMii is an anonymous messaging app that allows you to connect with others with
       cp .env.example .env
     ```
 
-4. Change `DB_CONNECTION` to mysql in .env file
+4. Change `DB_CONNECTION` to mysql in .env file or you can use SQLite
 
    ```bash
      DB_CONNECTION=mysql
