@@ -20,7 +20,7 @@
         </div>
         <livewire:partials.footer />
     </div>
-    <a href="https://tally.so" target="_blank" class="fixed bottom-4 right-4 transition-all duration-300 ease-in-out items-center gap-2 px-4 py-2 text-sm text-white bg-blue-600 rounded-full shadow-lg hidden hover:bg-blue-700 lg:flex dark:shadow-blue-500/30">
+    <a href="https://tally.so" target="_blank" class="fixed items-center hidden gap-2 px-4 py-2 text-sm text-white transition-all duration-300 ease-in-out bg-blue-600 rounded-full shadow-lg bottom-4 right-4 hover:bg-blue-700 lg:flex dark:shadow-blue-500/30">
         <span class="icon-[fluent--chat-28-filled] w-5 h-5"></span>
         Send Feedback
     </a>
