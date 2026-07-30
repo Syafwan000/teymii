@@ -1,15 +1,11 @@
 <div class="max-w-md mx-auto flex flex-col gap-5">
     @if($allMessages->count() > 0)
         <div class="flex justify-between">
-            <p class="font-semibold">{{ $allMessages->count() }} Messages</p>
-            @if(session()->has('instance_user'))
-                @if(session('instance_user')->slug === $user->slug)
-                    <button wire:click="refreshData" class="group flex items-center gap-1">
-                        <span class="icon-[humbleicons--refresh] w-5 h-5 group-active:motion-rotate-in-180"></span>
-                        Refresh
-                    </button>
-                @endif
-            @endif
+            <p class="font-semibold">{{ $allMessages->count() . ' ' . ($allMessages->count() === 1 ? 'Message' : 'Messages') }}</p>
+            <button wire:click="refreshData" class="group flex items-center gap-1">
+                <span class="icon-[humbleicons--refresh] w-5 h-5 group-active:motion-rotate-in-180"></span>
+                Refresh
+            </button>
         </div>
         @foreach($messages as $message)
             <div id="message-card" class="flex flex-col gap-3 justify-between text-left w-full bg-gray-200 rounded-lg min-h-24 p-5 shadow-md dark:text-slate-200 dark:bg-gray-600">

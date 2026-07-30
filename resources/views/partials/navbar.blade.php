@@ -32,7 +32,7 @@
                     <p class="font-extrabold text-2xl text-white leading-relaxed sm:text-3xl">#SayTheUnsayable</p>
                 </div>
                 <div class="grid grid-cols-12 col-span-12 gap-3 rounded-2xl order-1 min-[550px]:grid-cols-2 min-[550px]:col-span-4 min-[550px]:order-2">
-                    <button id="theme-switcher" :class="menu && 'motion-preset-blur-down-lg motion-preset-fade'" class="group col-span-12 flex justify-center items-center transition-all duration-300 ease-in-out bg-gray-200 rounded-2xl border border-gray-300 shadow-lg overflow-hidden hover:border-indigo-500/30 hover:shadow-indigo-500/30 max-[550px]:min-h-14 min-[550px]:gap-5 min-[550px]:col-span-2 dark:bg-gray-600 dark:border-gray-700">
+                    <button type="button" id="theme-switcher" :class="menu && 'motion-preset-blur-down-lg motion-preset-fade'" class="group col-span-12 flex justify-center items-center transition-all duration-300 ease-in-out bg-gray-200 rounded-2xl border border-gray-300 shadow-lg overflow-hidden hover:border-indigo-500/30 hover:shadow-indigo-500/30 max-[550px]:min-h-14 min-[550px]:gap-5 min-[550px]:col-span-2 dark:bg-gray-600 dark:border-gray-700">
                         <span class="icon-[fluent--weather-moon-24-filled] transition-all duration-300 ease-in-out w-7 h-7 bg-gradient-to-br from-slate-700 to-slate-500 group-hover:from-blue-600 group-hover:to-indigo-500 min-[550px]:w-8 min-[550px]:h-8 dark:hidden dark:from-slate-200 dark:to-slate-300 dark:group-hover:from-blue-200 dark:group-hover:to-indigo-200"></span>
                         <span class="icon-[mingcute--sun-fill] transition-all duration-300 ease-in-out hidden w-7 h-7 bg-gradient-to-br from-slate-700 to-slate-500 group-hover:from-blue-600 group-hover:to-indigo-500 min-[550px]:w-8 min-[550px]:h-8 dark:block dark:from-slate-200 dark:to-slate-300 dark:group-hover:from-blue-200 dark:group-hover:to-indigo-200"></span>
                     </button>
@@ -57,13 +57,14 @@
 
 @script
 <script>
-    $wire.$el.querySelector('#theme-switcher').addEventListener('click', () => {
-        localStorage.theme = localStorage.theme === 'dark' ? 'light' : 'dark'
-        if(localStorage.theme === 'dark') {
-            document.documentElement.classList.add('dark')
-        } else {
-            document.documentElement.classList.remove('dark')
-        }
-    })
+    const themeSwitcher = $wire.$el.querySelector('#theme-switcher')
+
+    if (themeSwitcher) {
+        themeSwitcher.addEventListener('click', () => {
+            const isDark = document.documentElement.classList.toggle('dark')
+
+            localStorage.theme = isDark ? 'dark' : 'light'
+        })
+    }
 </script>
 @endscript

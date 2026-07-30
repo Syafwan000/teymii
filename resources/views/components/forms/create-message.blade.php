@@ -27,13 +27,13 @@
                     trigger="anon_name"
                     type="text"
                     :error="$errors->has('anon_name') ? $errors->first('anon_name') : null"
-                    placeholder="e.g. fans gwe" />
+                    placeholder="e.g. specter" />
                 <livewire:components.inputs.textarea
                     wire:model="description"
                     label="Description (optional)"
                     trigger="desc"
                     :error="$errors->has('description') ? $errors->first('description') : null"
-                    placeholder="e.g. berikan aku hujatan" />
+                    placeholder="e.g. roast me" />
             </div>
             <button type="submit" class="transition-all duration-300 ease-in-out min-w-56 inline-flex justify-center gap-2 items-center bg-gradient-to-br from-blue-600 to-indigo-500 text-white font-extrabold px-6 py-3 rounded-lg shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/60 hover:opacity-80">
                 <span wire:loading.remove>Get your message</span>

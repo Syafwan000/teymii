@@ -7,5 +7,5 @@
             <span class="icon-[material-symbols--arrow-insert-rounded] -scale-x-100 w-5 h-5"></span>
         </a>
     </div>
-    <p class="text-slate-700 dark:text-slate-200">&copy; {{ date('Y') }} TeyMii. Crafted with 💖</p>
+    <p class="text-slate-700 dark:text-slate-200">&copy; {{ date('Y') }} TeyMii. Crafted with ✨</p>
 </footer>
