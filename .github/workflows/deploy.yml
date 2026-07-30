@@ -23,7 +23,7 @@ jobs:
           npm run build
 
       - name: Sync Build Assets to Azure VM
-        uses: Burnett01/rsync-deployments@v7.0
+        uses: easingthemes/ssh-deploy@v5.0.0
         with:
           switches: -avzr --delete
           path: public/build/
