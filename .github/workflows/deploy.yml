@@ -16,6 +16,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '20'
+          cache: 'npm'
 
       - name: Install & Build Assets
         run: |
@@ -25,12 +26,12 @@ jobs:
       - name: Sync Build Assets to Azure VM
         uses: easingthemes/ssh-deploy@v5.0.0
         with:
-          switches: -avzr --delete
-          path: public/build/
-          remote_path: /var/www/teymii/public/build/
-          remote_host: ${{ secrets.SSH_HOST }}
-          remote_user: ${{ secrets.SSH_USERNAME }}
-          remote_key: ${{ secrets.SSH_KEY }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
+          REMOTE_HOST: ${{ secrets.SSH_HOST }}
+          REMOTE_USER: ${{ secrets.SSH_USERNAME }}
+          SOURCE: public/build/
+          TARGET: /var/www/teymii/public/build/
+          ARGS: -avzr --delete
 
       - name: Run Laravel Commands via SSH
         uses: appleboy/ssh-action@v1.0.0
