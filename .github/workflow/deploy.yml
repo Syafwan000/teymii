@@ -1,0 +1,57 @@
+name: Deploy Laravel App to Azure VM
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install & Build Assets
+        run: |
+          npm ci
+          npm run build
+
+      - name: Sync Build Assets to Azure VM
+        uses: Burnett01/rsync-deployments@v7.0.1
+        with:
+          switches: -avzr --delete
+          path: public/build/
+          remote_path: /var/www/teymii/public/build/
+          remote_host: ${{ secrets.SSH_HOST }}
+          remote_user: ${{ secrets.SSH_USERNAME }}
+          remote_key: ${{ secrets.SSH_KEY }}
+
+      - name: Run Laravel Commands via SSH
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd /var/www/teymii
+
+            php artisan down || true
+
+            git pull origin main
+
+            composer install --no-dev --optimize-autoloader
+
+            php artisan optimize:clear
+
+            php artisan migrate --force
+            php artisan config:cache
+            php artisan route:cache
+            php artisan view:cache
+
+            php artisan up
