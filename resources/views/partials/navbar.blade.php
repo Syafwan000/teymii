@@ -22,8 +22,8 @@
         </button>
         <div class="min-h-full flex flex-col justify-between px-4 pt-20 pb-6 sm:px-8">
             <div :class="menu && 'motion-preset-blur-up-lg motion-preset-fade'" class="relative w-full aspect-video bg-gradient-to-br from-blue-600 via-indigo-500 to-purple-500 rounded-2xl p-6 shadow-lg overflow-hidden dark:shadow-indigo-500/30">
-                <img class="absolute -bottom-1 left-1/2 -translate-x-1/2 hidden min-[500px]:block" src="{{ asset('assets/images/banner.png') }}" alt="Banner">
-                <p class="text-white font-semibold text-3xl block leading-relaxed italic min-[500px]:hidden">
+                <img class="absolute w-[250px] -bottom-1 right-8 hidden min-[600px]:block" src="{{ asset('assets/images/banner.png') }}" alt="Banner">
+                <p class="text-white font-semibold text-3xl leading-relaxed italic min-[600px]:max-w-xs">
                     <span class="font-black not-italic">TeyMii</span> — Create your own secret!
                 </p>
             </div>

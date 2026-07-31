@@ -48,6 +48,8 @@ class CreateMessage extends Component
 
     public function render()
     {
-        return view('components.forms.create-message');
+        return view('components.forms.create-message', [
+            'expired_at' => session('instance_user') ? session('instance_user')->expired_at->format('d M Y') : null,
+        ]);
     }
 }

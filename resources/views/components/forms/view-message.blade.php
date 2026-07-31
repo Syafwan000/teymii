@@ -23,6 +23,6 @@
             {{ $messages->links() }}
         </div>
     @else
-        <p class="font-semibold tracking-wide text-slate-400 cursor-default py-20">No Messages</p>
+        <p class="font-semibold tracking-wide text-slate-400 cursor-default py-20">No Message</p>
     @endif
 </div>

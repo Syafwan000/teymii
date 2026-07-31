@@ -3,13 +3,19 @@
         <div class="max-w-xs inline-flex flex-col gap-6">
             <div class="inline-flex flex-col items-center cursor-default text-slate-700 dark:text-slate-200">
                 <p class="text-xl font-semibold">{{ session('instance_user')->name }}</p>
-                <span class="text-sm">{{ $total_messages }} Messages</span>
+                <span class="text-sm">{{ $total_messages . ' ' . ($total_messages < 1 ? 'Message' : 'Messages') }}</span>
             </div>
-            <a wire:navigate href="{{ route('message', session('instance_user')->slug) }}" class="transition-all duration-300 ease-in-out min-w-56 inline-flex justify-center gap-2 items-center bg-gradient-to-br from-blue-600 to-indigo-500 text-white font-extrabold px-6 py-3 rounded-lg shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/60 hover:opacity-80">
-                <span wire:loading.remove>My Messages</span>
-                <i wire:loading.remove class="icon-[stash--paperplane-solid] w-6 h-6 text-white"></i>
-                <i wire:loading class="icon-[line-md--loading-twotone-loop] w-6 h-6 text-white"></i>
-            </a>
+            <div class="flex flex-col gap-5">
+                <a wire:navigate href="{{ route('message', session('instance_user')->slug) }}" class="max-w-[224px] mx-auto transition-all duration-300 ease-in-out min-w-56 inline-flex justify-center gap-2 items-center bg-gradient-to-br from-blue-600 to-indigo-500 text-white font-extrabold px-6 py-3 rounded-lg shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/60 hover:opacity-80">
+                    <span wire:loading.remove>My {{ ($total_messages < 1 ? 'Message' : 'Messages') }}</span>
+                    <i wire:loading.remove class="icon-[stash--paperplane-solid] w-6 h-6 text-white"></i>
+                    <i wire:loading class="icon-[line-md--loading-twotone-loop] w-6 h-6 text-white"></i>
+                </a>
+                <div class="flex flex-col text-xs text-slate-500 dark:text-slate-400 italic cursor-default">
+                    <span>Valid until {{ $expired_at }}</span>
+                    <span>This message will be automatically deleted after this date.</span>
+                </div>
+            </div>
         </div>
     @else
         <form wire:submit.prevent="create" class="space-y-6" onkeydown="return event.key != 'Enter';">

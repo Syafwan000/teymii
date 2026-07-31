@@ -8,7 +8,28 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/favicon/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/favicon/favicon-16x16.png') }}">
     <link rel="manifest" href="{{ asset('assets/favicon/site.webmanifest') }}">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5TYE58T3ZQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-5TYE58T3ZQ');
+    </script>
     <title>{{ $title ?? env('APP_NAME') }}</title>
+    <script>
+        (() => {
+            const getTheme = () => localStorage.theme ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+
+            const applyTheme = () => {
+                document.documentElement.classList.toggle('dark', getTheme() === 'dark')
+            }
+
+            applyTheme()
+            document.addEventListener('livewire:navigated', applyTheme)
+        })()
+    </script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
 </head>
@@ -25,11 +46,5 @@
         Send Feedback
     </a> --}}
     @livewireScripts
-    <script>
-        const theme = localStorage.theme ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
-
-        localStorage.theme = theme
-        document.documentElement.classList.toggle('dark', theme === 'dark')
-    </script>
 </body>
 </html>
