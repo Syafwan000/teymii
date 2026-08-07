@@ -9,6 +9,8 @@ class About extends Component
     public function render()
     {
         return view('pages.about')
-            ->title('About — TeyMii');
+            ->layout('layouts.app', [
+                'title' => 'About — TeyMii',
+            ]);
     }
 }

@@ -17,6 +17,9 @@ class Message extends Component
     public function render()
     {
         return view('pages.message')
-            ->title('Send message to ' . $this->user->name . ' — TeyMii');
+            ->layout('layouts.app', [
+                'title' => 'Send message to ' . $this->user->name . ' — TeyMii',
+                'meta_image' => asset('assets/images/meta-image-sender.png')
+            ]);
     }
 }

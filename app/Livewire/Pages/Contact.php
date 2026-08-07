@@ -9,6 +9,8 @@ class Contact extends Component
     public function render()
     {
         return view('pages.contact')
-            ->title('Contact — TeyMii');
+            ->layout('layouts.app', [
+                'title' => 'Contact — TeyMii',
+            ]);
     }
 }

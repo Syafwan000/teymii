@@ -1,0 +1,7 @@
+@font-face {
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 200 800;
+    font-display: swap;
+    src: url("/Manrope-VariableFont.woff2") format("woff2");
+}

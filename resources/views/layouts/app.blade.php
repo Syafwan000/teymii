@@ -4,19 +4,43 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    @php
+        $title = $title ?? env('APP_NAME');
+        $meta_description = $meta_description ?? 'Chat anonymously with TeyMii. Share your thoughts and feelings freely in a safe, secure space—no identity revealed.';
+        $meta_keywords = $meta_keywords ?? 'TeyMii, anonymous messaging app, pesan anonim, aplikasi pesan rahasia, kirim pesan anonim, chat anonim, secret messages, anonymous chat, curhat anonim, honest conversation, judgment-free chat, safe messaging app, secure messaging, spotify integration, share message spotify, aplikasi curhat, pesan tanpa identitas, anonymous Q&A, kotak pesan anonim, laravel livewire app, kirim kritik saran anonim, ask me anything anonymous, self expression app, ruang aman berekspresi';
+        $meta_image = $meta_image ?? asset('assets/images/meta-image.png');
+    @endphp
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="{{ $title ?? env('APP_NAME') }}" />
+    <meta name="description" content="{{ $meta_description }}" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ url()->current() }}" />
+    <meta property="og:title" content="{{ $title ?? env('APP_NAME') }}" />
+    <meta property="og:description" content="{{ $meta_description }}" />
+    <meta property="og:image" content="{{ $meta_image }}" />
+    <!-- X (Twitter) -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="{{ url()->current() }}" />
+    <meta property="twitter:title" content="{{ $title ?? env('APP_NAME') }}" />
+    <meta property="twitter:description" content="{{ $meta_description }}" />
+    <meta property="twitter:image" content="{{ $meta_image }}" />
+    {{-- Favicon --}}
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/favicon/apple-touch-icon.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/favicon/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/favicon/favicon-16x16.png') }}">
     <link rel="manifest" href="{{ asset('assets/favicon/site.webmanifest') }}">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5TYE58T3ZQ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+    @production
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5TYE58T3ZQ"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-        gtag('config', 'G-5TYE58T3ZQ');
-    </script>
+            gtag('config', 'G-5TYE58T3ZQ');
+        </script>
+    @endproduction
     <title>{{ $title ?? env('APP_NAME') }}</title>
     <script>
         (() => {
